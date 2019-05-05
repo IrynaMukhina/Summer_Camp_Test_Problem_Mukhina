@@ -179,7 +179,6 @@ function reportTotalYear(data) {
           }, 0)
         }, 0);
         let totalInCurrency = parseFloat((totalInEuro * receiveRate(currency)).toFixed(2));
-        clearContainer(wrapper);
         if (isNaN(totalInCurrency)) {
           createParagraph('error-message');
           text.innerHTML = 'Currency which you enter does not exist. Please try again';
@@ -188,8 +187,13 @@ function reportTotalYear(data) {
           text.innerHTML = `Total for ${year} in ${currency} currency is ${totalInCurrency}`;
         }
       } else {
-        createParagraph('error-message');
-        text.innerHTML = 'There is no any purchaise in this year';
+        if(validDate(year)) {
+          createParagraph('error-message');
+          text.innerHTML = 'There is no any purchaise in this year';
+        } else {
+          createParagraph('error-message');
+          text.innerHTML = 'Year which you enter does not exist. Please try again';
+        }
       }
     } else {
       createParagraph('empty-message');
