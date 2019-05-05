@@ -1,7 +1,7 @@
 # Summer_Camp_Test_Problem_Mukhina
 This web page is basic version of an application which allow to collect information about incomes and get annual income statistics.
 
-To run the project download it, open project root directory and run 'npm start' command. After that, you can find a project at http://localhost:8080/. Also you can just open index.html file from src folder.
+To run the project download it, open project root directory in the Command Promp or other terminal software, install node_modules with 'npm install', and then run 'npm start' command. After that, you can find a project at http://localhost:8080/. Also you can just open index.html file from src folder.
 
 About Web Application
 Entering data about purchases are stored in LocalStorage and available until the browser will be closed.
